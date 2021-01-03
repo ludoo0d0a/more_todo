@@ -1,7 +1,8 @@
 import 'dart:io';
 
+// import 'package:moor_ffi/moor_ffi.dart';
+import 'package:moor/ffi.dart';
 import 'package:moor/moor.dart';
-import 'package:moor_ffi/moor_ffi.dart';
 import 'package:more_todo/data/categories.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
@@ -17,9 +18,7 @@ class Todos extends Table {
 
   TextColumn get content => text().nullable().named('description')();
 
-  IntColumn get category => integer()
-      .nullable()
-      .customConstraint('NULL REFERENCES categories(id) ON DELETE CASCADE')();
+  IntColumn get category => integer().nullable().customConstraint('NULL REFERENCES categories(id) ON DELETE CASCADE')();
 
   BoolColumn get completed => boolean().withDefault(Constant(false))();
 }

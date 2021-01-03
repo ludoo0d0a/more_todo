@@ -14,25 +14,26 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   cupertino_icons: ^0.1.2
-  moor: ^2.4.0
-  moor_ffi: ^0.4.0
-  path_provider: ^1.6.5
-  path: ^1.6.4
-  provider: ^4.0.4
-  flutter_slidable: ^0.5.4
+  moor: ^3.4.0
+  sqlite3_flutter_libs: ^0.3.0
+  #moor_ffi: ^0.4.0
+  path_provider: ^1.6.24
+  path: ^1.7.0
+  provider: ^4.3.2+3
+  flutter_slidable: ^0.5.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  moor_generator: ^2.4.0
-  build_runner: ^1.8.1
+  moor_generator: ^3.4.0
+  build_runner: ^1.10.11
 
 
 # For information on the generic Dart part of this file, see the
